@@ -1,0 +1,244 @@
+Feature: Display Login Form # features/Display_Login_Form.feature:1
+  As a user,
+  I want to see a login form with fields for email and password,
+  So that I can enter my credentials to access the app.
+  @ui @validation @negative
+  Scenario Outline: Required field validation for empty email and/or password -- @1.1   # features/Display_Login_Form.feature:21
+    Given the user is on the login page                                                 # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "<empty>" and password "validPass1" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Email is required" is displayed                             # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Required field validation for empty email and/or password -- @1.2          # features/Display_Login_Form.feature:22
+    Given the user is on the login page                                                        # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "valid@example.com" and password "<empty>" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Password is required" is displayed                                 # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Required field validation for empty email and/or password -- @1.3   # features/Display_Login_Form.feature:23
+    Given the user is on the login page                                                 # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "<empty>" and password "<empty>"    # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Email is required" is displayed                             # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Email format validation -- @1.1                                          # features/Display_Login_Form.feature:33
+    Given the user is on the login page                                                      # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "invalidemail" and password "validPass1" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Please enter a valid email address" is displayed                 # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Email format validation -- @1.2                                      # features/Display_Login_Form.feature:34
+    Given the user is on the login page                                                  # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "invalid@" and password "validPass1" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Please enter a valid email address" is displayed             # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Email format validation -- @1.3                                          # features/Display_Login_Form.feature:35
+    Given the user is on the login page                                                      # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "@invalid.com" and password "validPass1" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Please enter a valid email address" is displayed                 # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Password minimum length validation -- @1.1                             # features/Display_Login_Form.feature:45
+    Given the user is on the login page                                                    # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "valid@example.com" and password "123" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Password must be at least 6 characters" is displayed           # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Password minimum length validation -- @1.2                               # features/Display_Login_Form.feature:46
+    Given the user is on the login page                                                      # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "valid@example.com" and password "abcde" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Password must be at least 6 characters" is displayed             # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @validation @negative
+  Scenario Outline: Password minimum length validation -- @1.3                               # features/Display_Login_Form.feature:47
+    Given the user is on the login page                                                      # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "valid@example.com" and password "1a2b3" # features/steps/Display_Login_Form_steps.py:54
+    Then the error message "Password must be at least 6 characters" is displayed             # features/steps/Display_Login_Form_steps.py:82
+
+  @ui @success
+  Scenario Outline: Successful login form submission with valid email and password -- @1.1     # features/Display_Login_Form.feature:58
+    Given the user is on the login page                                                        # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "user@example.com" and password "passw0rd" # features/steps/Display_Login_Form_steps.py:54
+    Then no error messages are displayed                                                       # features/steps/Display_Login_Form_steps.py:115
+      Traceback (most recent call last):
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+          response = self._make_request(
+                     ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+          response = conn.getresponse()
+                     ^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 464, in getresponse
+          httplib_response = super().getresponse()
+                             ^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 1423, in getresponse
+          response.begin()
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 331, in begin
+          version, status, reason = self._read_status()
+                                    ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 300, in _read_status
+          raise RemoteDisconnected("Remote end closed connection without"
+      http.client.RemoteDisconnected: Remote end closed connection without response
+      
+      During handling of the above exception, another exception occurred:
+      
+      Traceback (most recent call last):
+        File "/opt/anaconda3/lib/python3.12/site-packages/behave/model.py", line 1909, in run
+          match.run(runner.context)
+        File "/opt/anaconda3/lib/python3.12/site-packages/behave/matchers.py", line 104, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/Display_Login_Form_steps.py", line 126, in step_then_no_error_messages_displayed
+          WebDriverWait(context.driver, 3).until(
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+          value = method(self._driver)
+                  ^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 156, in _predicate
+          return _element_if_visible(driver.find_element(*locator))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 770, in find_element
+          return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+          response = self.command_executor.execute(driver_command, params)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+          return self._request(command_info[0], url, body=data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+          response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/_request_methods.py", line 144, in request
+          return self.request_encode_body(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/_request_methods.py", line 279, in request_encode_body
+          return self.urlopen(method, url, **extra_kw)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+          response = conn.urlopen(method, u.request_uri, **kw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+          retries = retries.increment(
+                    ^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+          raise reraise(type(error), error, _stacktrace)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+          raise value.with_traceback(tb)
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+          response = self._make_request(
+                     ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+          response = conn.getresponse()
+                     ^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 464, in getresponse
+          httplib_response = super().getresponse()
+                             ^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 1423, in getresponse
+          response.begin()
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 331, in begin
+          version, status, reason = self._read_status()
+                                    ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 300, in _read_status
+          raise RemoteDisconnected("Remote end closed connection without"
+      urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+      
+      Captured logging:
+      INFO:behave_test:Injected JS to disable browser validation and attached MutationObserver before step.
+      INFO:behave_test:Injected JS to disable browser validation and attached MutationObserver before step.
+      INFO:behave_test:Injected JS to disable browser validation and attached MutationObserver before step.
+
+    And the user is allowed to proceed with login                                              # None
+
+  @ui @success
+  Scenario Outline: Successful login form submission with valid email and password -- @1.2    # features/Display_Login_Form.feature:59
+    Given the user is on the login page                                                       # features/steps/Display_Login_Form_steps.py:8
+    When the user submits the login form with email "hello@test.com" and password "secret123" # features/steps/Display_Login_Form_steps.py:54
+    Then no error messages are displayed                                                      # features/steps/Display_Login_Form_steps.py:115
+      Traceback (most recent call last):
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+          response = self._make_request(
+                     ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+          response = conn.getresponse()
+                     ^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 464, in getresponse
+          httplib_response = super().getresponse()
+                             ^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 1423, in getresponse
+          response.begin()
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 331, in begin
+          version, status, reason = self._read_status()
+                                    ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 300, in _read_status
+          raise RemoteDisconnected("Remote end closed connection without"
+      http.client.RemoteDisconnected: Remote end closed connection without response
+      
+      During handling of the above exception, another exception occurred:
+      
+      Traceback (most recent call last):
+        File "/opt/anaconda3/lib/python3.12/site-packages/behave/model.py", line 1909, in run
+          match.run(runner.context)
+        File "/opt/anaconda3/lib/python3.12/site-packages/behave/matchers.py", line 104, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/Display_Login_Form_steps.py", line 126, in step_then_no_error_messages_displayed
+          WebDriverWait(context.driver, 3).until(
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+          value = method(self._driver)
+                  ^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 156, in _predicate
+          return _element_if_visible(driver.find_element(*locator))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 770, in find_element
+          return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+          response = self.command_executor.execute(driver_command, params)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+          return self._request(command_info[0], url, body=data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+          response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/_request_methods.py", line 144, in request
+          return self.request_encode_body(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/_request_methods.py", line 279, in request_encode_body
+          return self.urlopen(method, url, **extra_kw)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+          response = conn.urlopen(method, u.request_uri, **kw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+          retries = retries.increment(
+                    ^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+          raise reraise(type(error), error, _stacktrace)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+          raise value.with_traceback(tb)
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+          response = self._make_request(
+                     ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+          response = conn.getresponse()
+                     ^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 464, in getresponse
+          httplib_response = super().getresponse()
+                             ^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 1423, in getresponse
+          response.begin()
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 331, in begin
+          version, status, reason = self._read_status()
+                                    ^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.12/http/client.py", line 300, in _read_status
+          raise RemoteDisconnected("Remote end closed connection without"
+      urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+      
+      Captured logging:
+      INFO:behave_test:Injected JS to disable browser validation and attached MutationObserver before step.
+      INFO:behave_test:Injected JS to disable browser validation and attached MutationObserver before step.
+      INFO:behave_test:Injected JS to disable browser validation and attached MutationObserver before step.
+
+    And the user is allowed to proceed with login                                             # None
+

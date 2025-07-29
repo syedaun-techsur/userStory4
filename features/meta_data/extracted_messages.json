@@ -1,0 +1,22 @@
+[
+  {
+    "message": "useAuth must be used within an AuthProvider",
+    "type": "throwError"
+  },
+  {
+    "message": "Email is required",
+    "type": "react-form"
+  },
+  {
+    "message": "Please enter a valid email address",
+    "type": "react-form"
+  },
+  {
+    "message": "Password is required",
+    "type": "react-form"
+  },
+  {
+    "message": "Password must be at least 6 characters",
+    "type": "react-form"
+  }
+]

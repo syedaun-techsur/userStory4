@@ -1,0 +1,177 @@
+[
+  {
+    "key": "loading-screen",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='loading-screen']",
+    "value": "loading-screen"
+  },
+  {
+    "key": "login-form",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='login-form']",
+    "value": "login-form"
+  },
+  {
+    "key": "error-message",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='error-message']",
+    "value": "error-message"
+  },
+  {
+    "key": "email",
+    "strategy": "type",
+    "by": "type",
+    "selector": "[type='email']",
+    "value": "email"
+  },
+  {
+    "key": "email",
+    "strategy": "id",
+    "by": "id",
+    "selector": "[id='email']",
+    "value": "email"
+  },
+  {
+    "key": "Enter your email",
+    "strategy": "placeholder",
+    "by": "placeholder",
+    "selector": "[placeholder='Enter your email']",
+    "value": "Enter your email"
+  },
+  {
+    "key": "email-input",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='email-input']",
+    "value": "email-input"
+  },
+  {
+    "key": "email-error",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='email-error']",
+    "value": "email-error"
+  },
+  {
+    "key": "password",
+    "strategy": "id",
+    "by": "id",
+    "selector": "[id='password']",
+    "value": "password"
+  },
+  {
+    "key": "Enter your password",
+    "strategy": "placeholder",
+    "by": "placeholder",
+    "selector": "[placeholder='Enter your password']",
+    "value": "Enter your password"
+  },
+  {
+    "key": "password-input",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='password-input']",
+    "value": "password-input"
+  },
+  {
+    "key": "button",
+    "strategy": "type",
+    "by": "type",
+    "selector": "[type='button']",
+    "value": "button"
+  },
+  {
+    "key": "toggle-password",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='toggle-password']",
+    "value": "toggle-password"
+  },
+  {
+    "key": "password-error",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='password-error']",
+    "value": "password-error"
+  },
+  {
+    "key": "submit",
+    "strategy": "type",
+    "by": "type",
+    "selector": "[type='submit']",
+    "value": "submit"
+  },
+  {
+    "key": "login-button",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='login-button']",
+    "value": "login-button"
+  },
+  {
+    "key": "dashboard",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='dashboard']",
+    "value": "dashboard"
+  },
+  {
+    "key": "welcome-message",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='welcome-message']",
+    "value": "welcome-message"
+  },
+  {
+    "key": "logout-button",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='logout-button']",
+    "value": "logout-button"
+  },
+  {
+    "key": "user-info-card",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='user-info-card']",
+    "value": "user-info-card"
+  },
+  {
+    "key": "first-name",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='first-name']",
+    "value": "first-name"
+  },
+  {
+    "key": "last-name",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='last-name']",
+    "value": "last-name"
+  },
+  {
+    "key": "update-profile-btn",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='update-profile-btn']",
+    "value": "update-profile-btn"
+  },
+  {
+    "key": "security-settings-btn",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='security-settings-btn']",
+    "value": "security-settings-btn"
+  },
+  {
+    "key": "notifications-btn",
+    "strategy": "data-testid",
+    "by": "data-testid",
+    "selector": "[data-testid='notifications-btn']",
+    "value": "notifications-btn"
+  }
+]

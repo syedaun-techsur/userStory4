@@ -1,0 +1,7 @@
+User Story: Implement Logout Functionality
+Title: Implement Logout Functionality
+Description: As a logged-in user, I want to log out of my account, so that no one else can access my data.
+Acceptance Criteria:
+• Logout button clears token/session
+• Redirects user to login page
+• Access to dashboard is denied after logout

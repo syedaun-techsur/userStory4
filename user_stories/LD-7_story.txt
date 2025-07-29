@@ -1,0 +1,7 @@
+User Story: Display User Dashboard After Login
+Title: Display User Dashboard After Login
+Description: As a logged-in user, I want to see a personalized dashboard, so that I can view relevant information after login.
+Acceptance Criteria:
+• Dashboard route (/dashboard) only accessible with valid token/session
+• If unauthorized: redirect to login
+• If authorized: show user-specific content

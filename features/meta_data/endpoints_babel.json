@@ -1,0 +1,14 @@
+[
+  {
+    "method": "POST",
+    "path": "/api/login"
+  },
+  {
+    "method": "GET",
+    "path": "/api/me"
+  },
+  {
+    "method": "POST",
+    "path": "/api/logout"
+  }
+]

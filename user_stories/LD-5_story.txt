@@ -1,0 +1,10 @@
+User Story: Validate User Credentials via API
+Title: Validate User Credentials via API
+Description: As a system, I want to receive login credentials from the frontend, so that I can validate them against stored user data.
+Acceptance Criteria:
+• API endpoint POST /api/login receives email and password
+• Credentials are verified against stored hashed values
+• On valid credentials:
+  – Return success response with token (JWT or session ID)
+• On invalid credentials:
+  – Return 401 Unauthorized with error message

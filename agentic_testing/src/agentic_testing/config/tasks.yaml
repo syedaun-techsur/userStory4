@@ -1,0 +1,176 @@
+gherkin_generation:
+  description: >
+        {user_story}
+        ---
+        Here is a list of extracted user-facing messages from the app (for errors, success, etc.):
+        {messages}
+        ---
+        You are an expert BDD test automation engineer. Given the above user story, acceptance criteria, and the provided messages, generate a clean and concise Cucumber Gherkin `.feature` file that:
+
+        Can you give me a BDD Style Cucumber .feature gherkin file corresponding to the above user story in a way that I can directly convert that gherkin into step definition file and write my testing code 
+        to validate all the acceptance criteria and can you add tags as per the instructions given below for each scenario accordingly. 
+        At last make sure to replace all the emtpy value with <empty> if present.
+        Use tags like:
+          '@ui'         — for UI presence or state checks  
+          '@loading'    — for loading/spinner behavior  
+          '@validation' — for input or business-rule validation  
+          '@success'    — for successful "happy path" flows  
+          '@api'        — for backend/API interactions  
+          '@negative'   — for error/failure paths
+        Use the error/success for all messages in the feature file from the list of MESSAGES based on the scenerio and if no relevant message found then use your own knowledge to generate the message relevant to the scenerio.
+
+  expected_output: >
+        1. A complete `.feature` file with valid Gherkin syntax, representing all acceptance criteria from the user story as individual scenarios.
+        2. Use either parameterized steps or hardcoded values consistently—do not mix both styles within the same feature file.
+        3. Make sure to also add @ui tag with other tags to each scenarios if the scenario will be testing on UI.
+        4. Do not create duplicate steps where the same action appears in both parameterized and literal (hardcoded) forms.
+        5. Use `Scenario Outline` with `Examples` even for positive or success scenarios, not just edge cases or failures based on the acceptance criteria.
+        6. Ensure each step is clear, reusable, and structured to support automation via Behave step definitions, make sure no two steps are same and ambiguous in the feature file.
+  agent: gherkin_generator
+
+
+step_definition_generation:
+  description: >
+    You are given a Gherkin feature file content:
+    ---
+    {feature_content}
+    ---
+    Generate a Python step definition file suitable for Behave + Selenium:
+
+    Instructions:
+    • Create a single `.py` file based on the feature file name.
+    • Use `from behave import given, when, then` at top.
+    • Implement one function per unique step using appropriate decorator (`@given`, `@when`, `@then`).
+    • Use regex or parse-style placeholders for parameters.
+    • If parameterized, function signature should include parameters.
+    • Inside each function: add a `# TODO: implement` comment.
+    • Reuse step definitions when steps are identical—no duplicates.
+    • If a step is ambiguous, choose a reasonable interpretation and annotate with `# TODO clarify`.
+    • When generating step definitions, always use string-based step patterns with curly braces for parameters.
+    • Do NOT use re.compile or regex-based step decorators. Only use the string pattern style so Behave can match steps correctly.
+  expected_output: >
+    1. A valid Python file named `<feature_basename>_steps.py` and only python code not code surrounded by```python ```.
+    2. Contains import statements and one function per step with proper decorators.
+    3. Each function has a `# TODO: implement` body, plus optional Selenium comments.
+    4. Parameterized steps use placeholders in decorator and function args.
+    5. Shared steps are deduplicated.
+  agent: step_definition_generator
+
+selenium_test_generation:
+  description: >
+    You are given the following test assets:
+
+    1. **Scaffolded Step Definition File (Python)**:
+    - Contains Python step function definitions with empty or placeholder bodies.
+    - Your job is to fill in the body of each function based on the corresponding feature step.
+
+    ---
+    {step_def_content}
+    ---
+
+    2. **Gherkin Feature File**:
+    - The source BDD specification that describes all scenarios and steps.
+
+    ---
+    {feature_content}
+    ---
+
+    3. **UI Route Metadata (JSON)**:
+    - This maps logical page routes used in the app like after certain action the website redirect to certain page.
+    ---
+    {ui_endpoints_json}
+    ---
+
+    4. **Locator Metadata (locators.json)**:
+    - Use this to locate UI elements in all Selenium interactions.
+
+    ---
+    {locators_json}
+    ---
+
+    5. **API Endpoint Metadata (endpoints.json)**:
+    - Use this to validate that UI actions trigger expected API calls or return values.
+
+    ---
+    {endpoints_json}
+    ---
+
+    **Instructions**:
+    - Implement each step function by writing the correct Selenium or logic code.
+    - Use `context.driver` for all browser operations.
+    - Lookup UI elements using:
+        context.get_locator(<key>)  # Always use this helper to retrieve (By, selector) tuples for Selenium element lookups.
+    - **Do NOT use getattr(By, ...), .upper(), or any string manipulation on the 'by' value. Use the (by, selector) tuple directly as returned.**
+    - **Example:**
+        by, selector = context.get_locator("login-form")
+        element = WebDriverWait(context.driver, 10).until(
+            EC.presence_of_element_located((by, selector))
+        )
+    - Use WebDriverWait + EC (ExpectedConditions) for all interactions.
+    - For input steps:
+        * Replace `<empty>` with an empty string
+        * Strip quotes from parameters before use
+    - For API-related steps:
+        * Validate via API mocks or context.mock_api if step implies a backend call
+    - For UI routes:
+        * Navigate using context.base_url + the route (e.g., `context.driver.get(context.base_url + "/login")`)
+       - For error/validation message steps:
+        * Dynamically select the correct locator key by matching keywords from the error message to locator keys in locators json file.
+        * Example: if error message is for a certain field the look for locator key that has the same field name for the error message if not then use the generic locator key for the error message from locators json file.
+
+
+    **Assumptions**:
+    - The `environment.py` is already present and sets up: `context.driver`, `context.base_url`, `context.locators`, `context.get_locator`, etc.
+    - All screenshots, logs, and mocks are handled automatically.
+
+    ⚠️ Output Rules:
+    - Only output the final Python code (no markdown).
+    - Maintain the same order and structure of function definitions from the input.
+    - If logic cannot be inferred, insert a `# TODO` with a helpful comment.
+    - Do not repeat imports if already present in the scaffold.
+
+  expected_output: >
+    1. A complete step implementation file, ready to run with Behave and Selenium.
+    2. All functions filled with valid code using context and metadata.
+    3. Handles UI navigation, form inputs, API calls, and error validations as described in the feature.
+    4. Ensures selector usage is robust and traceable via context.get_locator only.
+    5. Follows best practices for maintainability and readability.
+
+  agent: selenium_test_generator
+
+
+enhance_environment_for_test:
+  description: >
+    Given the following:
+    - Existing base `environment.py` file content:
+      ---
+      {environment_base_code}
+      ---
+    - A Python test file generated from step definitions (Behave test steps):
+      ---
+      {test_file_code}
+      ---
+
+    Enhance the `environment.py` code to ensure it fully supports the provided test.
+    Specifically:
+    - Add any missing setup logic based on tags or steps found in the test (e.g., @api, @db, @validation).
+    - If a specific API endpoint, DB call, or UI interaction requires a fixture or helper, add it appropriately.
+    - Add any tag detection or fixtures not already in the base file.
+    - Avoid duplication — only extend or patch as needed.
+    - If the base already handles it, leave it unchanged.
+    - Only update JS injection if additional validation suppression is needed (e.g., for special forms) else leave it unchanged.
+    - The code must remain runnable, modular, and production-ready.
+    - Never include markdown or external formatting.
+    - Don't change the base file code only add or update the code to support the test file.
+
+  expected_output: >
+    1. A single valid updated `environment.py` file with udpated code with the base file code and only python code not code surrounded by```python ```.
+    2. All additions are cleanly integrated and support test execution end-to-end.
+    3. All directory setup, context attributes, and teardown logic remain correct.
+    4. Inline comments and TODOs indicate where further team-specific logic can be added.
+    5. The result is immediately usable with `behave` for the given test file.
+
+  agent: environment_generator
+
+
+

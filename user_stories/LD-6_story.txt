@@ -1,0 +1,7 @@
+User Story: Manage Session or Token Authentication
+Title: Manage Session or Token Authentication
+Description: As a user, I want to stay logged in securely, so that I don’t have to log in repeatedly.
+Acceptance Criteria:
+• Issue JWT or session cookie on login
+• Client stores token securely (e.g., localStorage, HTTPOnly cookie)
+• Backend validates token on protected routes
