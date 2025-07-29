@@ -1,45 +1,56 @@
-@ui @api @loading
 Feature: Login Submission
   As a user,
   I want to submit my credentials,
   So that the system can validate them and log me in.
 
   @ui @api @loading
-  Scenario Outline: Submitting login credentials triggers backend request and displays loading state
+  Scenario Outline: Clicking the login button triggers request and shows loading state
     Given I am on the login page
-    When I enter email "<email>"
-    And I enter password "<password>"
+    When I enter email "<email>" and password "<password>"
     And I click the login button
-    Then a request to the backend is sent
-    And I should see a loading indicator
+    Then a request to the backend is triggered
+    And I see the loading state displayed
     Examples:
-      | email               | password    |
-      | user@example.com    | correctPwd1 |
+      | email               | password       |
+      | user@example.com    | validPass123   |
 
-  @ui @success @api
-  Scenario Outline: Successful login redirects user to the dashboard
+  @ui @api @success
+  Scenario Outline: Successful login redirects to dashboard
     Given I am on the login page
-    When I enter email "<email>"
-    And I enter password "<password>"
+    When I enter email "<email>" and password "<password>"
     And I click the login button
-    And the backend responds with success
+    And the backend response is successful
     Then I am redirected to the dashboard
     Examples:
-      | email            | password    |
-      | user@example.com | correctPwd1 |
+      | email              | password     |
+      | user@example.com   | validPass123 |
 
-  @ui @negative @api
-  Scenario Outline: Login failure shows relevant error message
+  @ui @validation @negative
+  Scenario Outline: Email field validation errors on login submission
     Given I am on the login page
-    When I enter email "<email>"
-    And I enter password "<password>"
+    When I enter email "<email>" and password "validPass123"
     And I click the login button
-    And the backend responds with failure and error message "<error_message>"
-    Then I see the error message "<error_message>" displayed
+    Then I see the error message displayed "<error_message>"
     Examples:
-      | email            | password    | error_message                   |
-      | user@example.com | wrongPwd    | Incorrect email or password.    |
-      | user@example.com | <empty>     | Password is required            |
-      | <empty>          | correctPwd1 | Email is required              |
-      | invalid-email    | somePwd    | Please enter a valid email address |
-      | user@example.com | short      | Password must be at least 6 characters |
+      | email          | error_message                  |
+      | <empty>        | Email is required              |
+      | invalid_email  | Please enter a valid email address |
+
+  @ui @validation @negative
+  Scenario Outline: Password field validation errors on login submission
+    Given I am on the login page
+    When I enter email "user@example.com" and password "<password>"
+    And I click the login button
+    Then I see the error message displayed "<error_message>"
+    Examples:
+      | password    | error_message                   |
+      | <empty>     | Password is required            |
+      | short      | Password must be at least 6 characters |
+
+  @ui @api @negative
+  Scenario: Backend returns authentication failure error
+    Given I am on the login page
+    When I enter email "user@example.com" and password "wrongPassword"
+    And I click the login button
+    And the backend response is failure with message "Invalid email or password"
+    Then I see the error message displayed "Invalid email or password"

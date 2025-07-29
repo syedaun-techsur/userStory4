@@ -184,10 +184,14 @@ def responses_mock_api(context):
     else:  
         context.logger.warning("No endpoints config found.")  
   
+    # Assign to context mock_api so after_scenario can stop/reset it  
+    context.mock_api = rsps_mock  
+  
     yield rsps_mock  
     rsps_mock.stop()  
     rsps_mock.reset()  
     context.logger.info("Responses mock API stopped.")  
+    context.mock_api = None  
   
 def before_all(context):  
     logs_dir = Path("features/logs")  
