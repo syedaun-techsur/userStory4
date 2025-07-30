@@ -175,6 +175,7 @@ enhance_environment_for_test:
 test_execution_and_debugging:
   description: >
     You are tasked with executing Selenium tests and fixing any failures that occur. Your goal is to intelligently detect and run available feature files, handling environment and directory issues.
+    The feature file to be tested is: {feature_selection}
 
     **CRITICAL RESTRICTION - FILE MODIFICATION LIMITS:**
     You are ONLY allowed to modify files that were created by the selenium pipeline process:

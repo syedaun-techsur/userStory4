@@ -326,7 +326,9 @@ def run():
             process=Process.sequential,
             verbose=True,
             )
-    result = crew.kickoff()
+    
+    # Pass FEATURE_SELECTION to the crew
+    result = crew.kickoff(inputs={'feature_selection': FEATURE_SELECTION})
 
 
 
