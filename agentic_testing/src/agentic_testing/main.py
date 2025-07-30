@@ -201,7 +201,7 @@ def generate_environment_file():
     except Exception as e:
         print(f"❌ Error generating features/environment.py: {e}")
 
-def run():
+def initialPipeline():
     """
     Run the pipeline for all or a specific user story file.
     """
@@ -209,7 +209,7 @@ def run():
 
     # Step 1: Fetch codebase
     print("[Step 1] Cloning repository...")
-    clone_repo()
+    #clone_repo()
     
     # Step 2: Extract messages (Python) and metadata (Babel)
     print("[Step 2] Running Python message extraction...")
@@ -308,6 +308,27 @@ def run():
             print(f"✅ Enhanced environment.py for {title} at {env_path}")
         except Exception as e:
             print(f"❌ Error enhancing environment.py for {title}: {e}")
+    return
+
+def run():
+    initialPipeline()
+    print("✅ Initial pipeline completed")
+
+    # Change to the project root so the agent can find the features directory
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..'))
+    os.chdir(project_root)
+    print(f"Changed directory to: {project_root}")
+
+    from crewai import Crew, Process
+    crew = Crew(
+            agents=[AgenticTesting().test_execution_debugger()],
+            tasks=[AgenticTesting().test_execution_debugging()],
+            process=Process.sequential,
+            verbose=True,
+            )
+    result = crew.kickoff()
+
+
 
 
 def train():
