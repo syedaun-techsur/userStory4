@@ -18,6 +18,14 @@ gherkin_generation:
           '@api'        — for backend/API interactions  
           '@negative'   — for error/failure paths
         Use the error/success for all messages in the feature file from the list of MESSAGES based on the scenerio and if no relevant message found then use your own knowledge to generate the message relevant to the scenerio.
+        
+        **IMPORTANT USER CREDENTIALS RESTRICTION:**
+        For all successful login scenarios (scenarios with @success tag), you MUST use ONLY the following credentials:
+        - Email: admin@example.com
+        - Password: password123
+        
+        Do NOT use any other email addresses or passwords for successful login scenarios. Only use admin@example.com/password123 for @success tagged scenarios.
+        For negative test scenarios (@negative tag), you can use any invalid credentials as needed.
 
   expected_output: >
         1. A complete `.feature` file with valid Gherkin syntax, representing all acceptance criteria from the user story as individual scenarios.

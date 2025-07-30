@@ -565,3 +565,392 @@
 2025-07-29 15:18:00,341 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
 2025-07-29 15:18:00,371 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
 2025-07-29 15:18:15,418 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:36:58,734 | INFO | === Test execution started ===
+2025-07-30 15:36:58,734 | INFO | Loaded 26 locators.
+2025-07-30 15:36:59,372 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:36:59,383 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:36:59,761 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:36:59,888 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:36:59,997 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:00,026 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:00,753 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:37:00,756 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:01,289 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:01,474 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:01,544 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:01,571 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:02,243 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:37:02,247 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:02,806 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:02,982 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:03,048 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:03,084 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:03,778 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:37:03,780 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:04,366 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:04,553 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:04,620 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:04,649 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:05,301 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:37:05,305 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:05,770 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:05,959 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:06,026 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:06,060 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:06,746 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:37:06,756 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:07,092 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:07,260 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:07,338 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:07,367 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:17,435 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:37:27,814 | INFO | Saved screenshot to features/screenshots/Successfully_submit_the_login_form_with_valid_credentials_--_@1.1_.png
+2025-07-30 15:37:59,786 | INFO | === Test execution started ===
+2025-07-30 15:37:59,786 | INFO | Loaded 26 locators.
+2025-07-30 15:38:00,343 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:00,457 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_missing_required_fields_or_invalid_email_format_shows_correct_error_messages_--_@1.1_.png
+2025-07-30 15:38:01,016 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:01,138 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_missing_required_fields_or_invalid_email_format_shows_correct_error_messages_--_@1.2_.png
+2025-07-30 15:38:01,672 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:01,787 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_missing_required_fields_or_invalid_email_format_shows_correct_error_messages_--_@1.3_.png
+2025-07-30 15:38:02,358 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:02,478 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_a_password_less_than_6_characters_shows_correct_error_message_--_@1.1_.png
+2025-07-30 15:38:03,028 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:03,154 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_a_password_less_than_6_characters_shows_correct_error_message_--_@1.2_.png
+2025-07-30 15:38:03,679 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:03,797 | INFO | Saved screenshot to features/screenshots/Successfully_submit_the_login_form_with_valid_credentials_--_@1.1_.png
+2025-07-30 15:38:23,621 | INFO | === Test execution started ===
+2025-07-30 15:38:23,622 | INFO | Loaded 26 locators.
+2025-07-30 15:38:24,167 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:24,170 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:24,516 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:35,253 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_missing_required_fields_or_invalid_email_format_shows_correct_error_messages_--_@1.1_.png
+2025-07-30 15:38:35,916 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:35,922 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:36,318 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:47,079 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_missing_required_fields_or_invalid_email_format_shows_correct_error_messages_--_@1.2_.png
+2025-07-30 15:38:47,776 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:47,788 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:48,194 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:58,910 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_missing_required_fields_or_invalid_email_format_shows_correct_error_messages_--_@1.3_.png
+2025-07-30 15:38:59,583 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:38:59,586 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:38:59,993 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:39:10,778 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_a_password_less_than_6_characters_shows_correct_error_message_--_@1.1_.png
+2025-07-30 15:39:11,467 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:39:11,472 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:39:11,776 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:39:22,482 | INFO | Saved screenshot to features/screenshots/Submit_the_login_form_with_a_password_less_than_6_characters_shows_correct_error_message_--_@1.2_.png
+2025-07-30 15:39:23,140 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:39:23,143 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:39:23,691 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:39:34,473 | INFO | Saved screenshot to features/screenshots/Successfully_submit_the_login_form_with_valid_credentials_--_@1.1_.png
+2025-07-30 15:40:07,744 | INFO | === Test execution started ===
+2025-07-30 15:40:07,745 | INFO | Loaded 26 locators.
+2025-07-30 15:40:08,355 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:40:08,369 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:40:08,882 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:40:15,512 | INFO | Selenium Chrome WebDriver quit.
+2025-07-30 15:45:42,513 | INFO | === Test execution started ===
+2025-07-30 15:45:42,513 | INFO | Loaded 26 locators.
+2025-07-30 15:45:43,145 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:43,159 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:43,747 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:43,875 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:43,973 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:44,178 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.1_.png
+2025-07-30 15:45:44,868 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:44,873 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:45,354 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:45,538 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:45,610 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:45,801 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.2_.png
+2025-07-30 15:45:46,460 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:46,465 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:46,879 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:47,059 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:47,129 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:47,325 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.3_.png
+2025-07-30 15:45:48,019 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:48,022 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:48,332 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:48,513 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:48,580 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:48,777 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.4_.png
+2025-07-30 15:45:49,464 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:49,467 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:50,001 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:50,204 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:50,278 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:50,470 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.5_.png
+2025-07-30 15:45:51,127 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:51,131 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:51,703 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:51,826 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:51,896 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:52,090 | INFO | Saved screenshot to features/screenshots/Show_multiple_error_messages_for_multiple_invalid_inputs_on_login_form_submission_--_@1.1_.png
+2025-07-30 15:45:52,799 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:52,802 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:53,194 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:53,377 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:53,460 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:53,488 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:54,260 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:54,262 | INFO | Responses mock API started.
+2025-07-30 15:45:54,262 | WARNING | No endpoints config found.
+2025-07-30 15:45:54,377 | INFO | Saved screenshot to features/screenshots/Authorized_user_accesses_dashboard_and_sees_user-specific_content_--_@1.1_.png
+2025-07-30 15:45:54,445 | INFO | Responses mock API stopped.
+2025-07-30 15:45:54,943 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:54,943 | INFO | Responses mock API started.
+2025-07-30 15:45:54,943 | WARNING | No endpoints config found.
+2025-07-30 15:45:55,069 | INFO | Saved screenshot to features/screenshots/Unauthorized_user_is_redirected_to_login_when_accessing_dashboard_without_valid_token/session_--_@1.1_.png
+2025-07-30 15:45:55,139 | INFO | Responses mock API stopped.
+2025-07-30 15:45:55,594 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:55,595 | INFO | Responses mock API started.
+2025-07-30 15:45:55,595 | WARNING | No endpoints config found.
+2025-07-30 15:45:55,710 | INFO | Saved screenshot to features/screenshots/Unauthorized_user_is_redirected_to_login_when_accessing_dashboard_without_valid_token/session_--_@1.2_.png
+2025-07-30 15:45:55,778 | INFO | Responses mock API stopped.
+2025-07-30 15:45:56,276 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:56,386 | INFO | Saved screenshot to features/screenshots/Successfully_log_out_from_the_application_--_@1.1_.png
+2025-07-30 15:45:56,915 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:57,027 | INFO | Saved screenshot to features/screenshots/Ensure_dashboard_access_is_denied_after_user_logs_out_--_@1.1_.png
+2025-07-30 15:45:57,586 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:57,586 | INFO | Responses mock API started.
+2025-07-30 15:45:57,586 | WARNING | No endpoints config found.
+2025-07-30 15:45:57,597 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:58,199 | INFO | Saved screenshot to features/screenshots/Clicking_the_login_button_triggers_a_backend_request_and_displays_a_loading_state_--_@1.1_.png
+2025-07-30 15:45:58,398 | INFO | Responses mock API stopped.
+2025-07-30 15:45:58,871 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:45:58,872 | INFO | Responses mock API started.
+2025-07-30 15:45:58,872 | WARNING | No endpoints config found.
+2025-07-30 15:45:58,875 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:45:59,440 | INFO | Saved screenshot to features/screenshots/Clicking_the_login_button_triggers_a_backend_request_and_displays_a_loading_state_--_@1.2_.png
+2025-07-30 15:45:59,632 | INFO | Responses mock API stopped.
+2025-07-30 15:46:00,125 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:00,126 | INFO | Responses mock API started.
+2025-07-30 15:46:00,126 | WARNING | No endpoints config found.
+2025-07-30 15:46:00,129 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:00,663 | INFO | Saved screenshot to features/screenshots/Successful_login_redirects_user_to_dashboard_--_@1.1_.png
+2025-07-30 15:46:00,862 | INFO | Responses mock API stopped.
+2025-07-30 15:46:01,326 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:01,330 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:02,010 | INFO | Saved screenshot to features/screenshots/Display_validation_error_messages_for_invalid_or_missing_inputs_--_@1.1_.png
+2025-07-30 15:46:02,705 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:02,708 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:03,323 | INFO | Saved screenshot to features/screenshots/Display_validation_error_messages_for_invalid_or_missing_inputs_--_@1.2_.png
+2025-07-30 15:46:03,985 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:03,998 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:04,586 | INFO | Saved screenshot to features/screenshots/Display_validation_error_messages_for_invalid_or_missing_inputs_--_@1.3_.png
+2025-07-30 15:46:05,284 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:05,287 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:05,860 | INFO | Saved screenshot to features/screenshots/Display_validation_error_messages_for_invalid_or_missing_inputs_--_@1.4_.png
+2025-07-30 15:46:06,532 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:06,533 | INFO | Responses mock API started.
+2025-07-30 15:46:06,533 | WARNING | No endpoints config found.
+2025-07-30 15:46:06,537 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:07,130 | INFO | Saved screenshot to features/screenshots/Unsuccessful_login_shows_relevant_error_message_from_backend_--_@1.1_.png
+2025-07-30 15:46:07,328 | INFO | Responses mock API stopped.
+2025-07-30 15:46:07,826 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:07,827 | INFO | Responses mock API started.
+2025-07-30 15:46:07,827 | WARNING | No endpoints config found.
+2025-07-30 15:46:07,833 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:46:08,410 | INFO | Saved screenshot to features/screenshots/Unsuccessful_login_shows_relevant_error_message_from_backend_--_@1.2_.png
+2025-07-30 15:46:08,602 | INFO | Responses mock API stopped.
+2025-07-30 15:46:09,069 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:09,069 | INFO | Responses mock API started.
+2025-07-30 15:46:09,069 | WARNING | No endpoints config found.
+2025-07-30 15:46:09,177 | INFO | Saved screenshot to features/screenshots/Successful_login_issues_JWT_or_session_cookie_and_stores_token_securely_--_@1.1_.png
+2025-07-30 15:46:09,241 | INFO | Responses mock API stopped.
+2025-07-30 15:46:09,731 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:09,845 | INFO | Saved screenshot to features/screenshots/Login_fails_due_to_missing_or_invalid_email_--_@1.1_.png
+2025-07-30 15:46:10,368 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:10,486 | INFO | Saved screenshot to features/screenshots/Login_fails_due_to_missing_or_invalid_email_--_@1.2_.png
+2025-07-30 15:46:11,044 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:11,168 | INFO | Saved screenshot to features/screenshots/Login_fails_due_to_missing_or_invalid_password_--_@1.1_.png
+2025-07-30 15:46:11,694 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:11,820 | INFO | Saved screenshot to features/screenshots/Login_fails_due_to_missing_or_invalid_password_--_@1.2_.png
+2025-07-30 15:46:11,887 | INFO | Responses mock API started.
+2025-07-30 15:46:11,887 | WARNING | No endpoints config found.
+2025-07-30 15:46:11,887 | INFO | Responses mock API stopped.
+2025-07-30 15:46:11,887 | INFO | Responses mock API started.
+2025-07-30 15:46:11,887 | WARNING | No endpoints config found.
+2025-07-30 15:46:11,888 | INFO | Responses mock API stopped.
+2025-07-30 15:46:11,888 | INFO | Responses mock API started.
+2025-07-30 15:46:11,888 | WARNING | No endpoints config found.
+2025-07-30 15:46:11,888 | INFO | Responses mock API stopped.
+2025-07-30 15:46:11,888 | INFO | Responses mock API started.
+2025-07-30 15:46:11,888 | WARNING | No endpoints config found.
+2025-07-30 15:46:11,888 | INFO | Responses mock API stopped.
+2025-07-30 15:46:11,888 | INFO | Responses mock API started.
+2025-07-30 15:46:11,888 | WARNING | No endpoints config found.
+2025-07-30 15:46:11,888 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,383 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:46:12,497 | INFO | Saved screenshot to features/screenshots/Using_useAuth_hook_outside_AuthProvider_shows_error_message.png
+2025-07-30 15:46:12,565 | INFO | Responses mock API started.
+2025-07-30 15:46:12,565 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,566 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,566 | INFO | Responses mock API started.
+2025-07-30 15:46:12,566 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,566 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,566 | INFO | Responses mock API started.
+2025-07-30 15:46:12,566 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,566 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,567 | INFO | Responses mock API started.
+2025-07-30 15:46:12,567 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,567 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,567 | INFO | Responses mock API started.
+2025-07-30 15:46:12,567 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,567 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,567 | INFO | Responses mock API started.
+2025-07-30 15:46:12,567 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,567 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,568 | INFO | Responses mock API started.
+2025-07-30 15:46:12,568 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,568 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,568 | INFO | Responses mock API started.
+2025-07-30 15:46:12,568 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,568 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,568 | INFO | Responses mock API started.
+2025-07-30 15:46:12,568 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,569 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,569 | INFO | Responses mock API started.
+2025-07-30 15:46:12,569 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,569 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,569 | INFO | Responses mock API started.
+2025-07-30 15:46:12,569 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,569 | INFO | Responses mock API stopped.
+2025-07-30 15:46:12,569 | INFO | Responses mock API started.
+2025-07-30 15:46:12,569 | WARNING | No endpoints config found.
+2025-07-30 15:46:12,569 | INFO | Responses mock API stopped.
+2025-07-30 15:47:30,213 | INFO | === Test execution started ===
+2025-07-30 15:47:30,213 | INFO | Loaded 26 locators.
+2025-07-30 15:47:30,825 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:30,930 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.1_.png
+2025-07-30 15:47:31,450 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:31,564 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.2_.png
+2025-07-30 15:47:32,140 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:32,246 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.3_.png
+2025-07-30 15:47:32,804 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:32,923 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.4_.png
+2025-07-30 15:47:33,448 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:33,562 | INFO | Saved screenshot to features/screenshots/Show_error_messages_for_empty_or_invalid_inputs_on_login_form_submission_--_@1.5_.png
+2025-07-30 15:47:34,126 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:34,240 | INFO | Saved screenshot to features/screenshots/Show_multiple_error_messages_for_multiple_invalid_inputs_on_login_form_submission_--_@1.1_.png
+2025-07-30 15:47:34,772 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:47:34,878 | INFO | Saved screenshot to features/screenshots/Successful_login_with_valid_credentials_--_@1.1_.png
+2025-07-30 15:50:17,599 | INFO | === Test execution started ===
+2025-07-30 15:50:17,599 | INFO | Loaded 26 locators.
+2025-07-30 15:50:18,330 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:18,333 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:18,648 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:18,695 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:18,707 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:18,720 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:19,429 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:19,432 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:19,932 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:20,048 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:20,160 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:20,187 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:20,902 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:20,914 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:21,458 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:21,644 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:21,708 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:21,737 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:22,410 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:22,424 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:22,874 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:23,072 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:23,142 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:23,175 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:23,874 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:23,876 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:24,314 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:24,500 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:24,582 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:24,610 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:25,272 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:25,283 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:25,708 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:25,893 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:25,962 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:25,990 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:26,699 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:26,702 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:27,207 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:27,392 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:27,457 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:27,492 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:28,160 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:28,174 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:28,586 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:28,764 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:28,830 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:28,858 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:29,582 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:29,592 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:29,988 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:30,160 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:30,238 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:30,266 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:30,940 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:50:30,942 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:31,415 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:31,600 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:31,669 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:50:31,700 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:24,111 | INFO | === Test execution started ===
+2025-07-30 15:58:24,111 | INFO | Loaded 26 locators.
+2025-07-30 15:58:24,848 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:58:24,849 | INFO | Responses mock API started.
+2025-07-30 15:58:24,849 | WARNING | No endpoints config found.
+2025-07-30 15:58:24,858 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:25,714 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:25,800 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:25,950 | INFO | Saved screenshot to features/screenshots/Authorized_user_accesses_dashboard_and_sees_user-specific_content_--_@1.1_.png
+2025-07-30 15:58:26,154 | INFO | Responses mock API stopped.
+2025-07-30 15:58:26,647 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:58:26,648 | INFO | Responses mock API started.
+2025-07-30 15:58:26,648 | WARNING | No endpoints config found.
+2025-07-30 15:58:26,654 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:27,353 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:27,437 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:38,170 | INFO | Saved screenshot to features/screenshots/Unauthorized_user_attempts_to_access_dashboard_and_is_redirected_to_login_--_@1.1_.png
+2025-07-30 15:58:38,371 | INFO | Responses mock API stopped.
+2025-07-30 15:58:38,871 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:58:38,871 | INFO | Responses mock API started.
+2025-07-30 15:58:38,871 | WARNING | No endpoints config found.
+2025-07-30 15:58:38,882 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:39,410 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:39,491 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:50,262 | INFO | Saved screenshot to features/screenshots/Unauthorized_user_attempts_to_access_dashboard_and_is_redirected_to_login_--_@1.2_.png
+2025-07-30 15:58:50,471 | INFO | Responses mock API stopped.
+2025-07-30 15:58:50,953 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:58:50,953 | INFO | Responses mock API started.
+2025-07-30 15:58:50,953 | WARNING | No endpoints config found.
+2025-07-30 15:58:50,961 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:50,969 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:58:51,463 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:02,205 | INFO | Saved screenshot to features/screenshots/Unauthorized_user_attempts_to_access_dashboard_and_is_redirected_to_login_--_@1.3_.png
+2025-07-30 15:59:02,401 | INFO | Responses mock API stopped.
+2025-07-30 15:59:02,901 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:59:02,912 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:03,436 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:03,680 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:03,707 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:04,374 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:59:04,377 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:04,815 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:05,063 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:05,091 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:05,778 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:59:05,783 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:06,152 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:06,394 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:06,422 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:07,088 | INFO | Chrome WebDriver initialized.
+2025-07-30 15:59:07,091 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:07,540 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:07,781 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.
+2025-07-30 15:59:07,814 | INFO | Injected JS to disable browser validation and attached MutationObserver before step.

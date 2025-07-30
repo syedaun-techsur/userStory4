@@ -1,69 +1,66 @@
 Feature: Display Login Form
-  As a user,
-  I want to see a login form with fields for email and password,
-  So that I can enter my credentials to access the app.
+  As a user, I want to see a login form with fields for email and password,
+  so that I can enter my credentials to access the app.
 
   @ui @validation
-  Scenario Outline: Display login form with required fields and login button
-    Given the user navigates to the login page
-    Then the login form is displayed
-    And the email input field is visible
-    And the password input field is visible
-    And the login button is visible
+  Scenario Outline: Validate presence of login form fields and login button
+    Given the user is on the login page
+    Then the login form should contain an email input field
+    And the login form should contain a password input field
+    And the login form should contain a login button
 
-  @ui @validation
-  Scenario Outline: Validate required fields on empty submission
-    Given the user navigates to the login page
-    When the user leaves the email field as "<email>"
-    And the user leaves the password field as "<password>"
-    And the user clicks the login button
-    Then the error message "<error_message>" is displayed
+  @ui @validation @negative
+  Scenario Outline: Validate required field errors when submitting empty form
+    Given the user is on the login page
+    When the user submits the login form with email "<email>" and password "<password>"
+    Then the error message for email should be "<emailError>"
+    And the error message for password should be "<passwordError>"
 
     Examples:
-      | email   | password  | error_message           |
-      | <empty> | valid123  | Email is required       |
-      | user@example.com | <empty> | Password is required     |
-      | <empty> | <empty> | Email is required       |
+      | email    | password  | emailError          | passwordError              |
+      | <empty>  | <empty>   | Email is required   | Password is required       |
+      | <empty>  | password123| Email is required  |                             |
+      | admin@example.com | <empty>    |                   | Password is required       |
 
-  @ui @validation
-  Scenario Outline: Validate proper email format
-    Given the user navigates to the login page
-    When the user enters the email as "<email>"
-    And the user enters the password as "valid123"
-    And the user clicks the login button
-    Then the error message "Please enter a valid email address" is displayed
+  @ui @validation @negative
+  Scenario Outline: Validate email format error message on invalid emails
+    Given the user is on the login page
+    When the user enters an invalid email "<email>" in the email input field
+    And the user enters a valid password "password123" in the password input field
+    And the user submits the login form
+    Then the error message for email should be "Please enter a valid email address"
+    And no error message should be shown for password
 
     Examples:
-      | email           |
-      | invalid-email   |
-      | user@example    |
-      | user@.com       |
-      | user@domain,com |
+      | email               |
+      | invalid-email       |
+      | user@domain         |
+      | user@domain,com     |
+      | admin@example       |
 
-  @ui @validation
-  Scenario Outline: Validate password minimum length requirement
-    Given the user navigates to the login page
-    When the user enters the email as "user@example.com"
-    And the user enters the password as "<password>"
-    And the user clicks the login button
-    Then the error message "Password must be at least 6 characters" is displayed
+  @ui @validation @negative
+  Scenario Outline: Validate password length requirement error
+    Given the user is on the login page
+    When the user enters a valid email "admin@example.com" in the email input field
+    And the user enters a password "<password>" in the password input field
+    And the user submits the login form
+    Then the error message for password should be "Password must be at least 6 characters"
 
     Examples:
       | password |
-      | 123      |
-      | abcde    |
-      | 1a2b3    |
+      | 123     |
+      | abc     |
+      | 12      |
 
   @ui @success
-  Scenario Outline: Successful login form submission with valid inputs
-    Given the user navigates to the login page
-    When the user enters the email as "<email>"
-    And the user enters the password as "<password>"
-    And the user clicks the login button
-    Then no error message is displayed
-    And the user is logged in successfully
+  Scenario Outline: Successful login with valid credentials
+    Given the user is on the login page
+    When the user enters the email "admin@example.com" in the email input field
+    And the user enters the password "password123" in the password input field
+    And the user submits the login form
+    Then the user is successfully logged in
 
-    Examples:
-      | email            | password  |
-      | user@example.com | valid123  |
-      | test.user@domain.com | password1 |
+  @negative
+  Scenario: Error when attempting to use authentication outside of provider
+    When the app is initialized without an AuthProvider
+    Then the error message "useAuth must be used within an AuthProvider" should be shown

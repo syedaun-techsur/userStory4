@@ -1,28 +1,42 @@
-@ui @api @success
+# language: en
+@ui @success
 Feature: Implement Logout Functionality
   As a logged-in user,
   I want to log out of my account,
   So that no one else can access my data.
 
-  @ui @api @success
-  Scenario Outline: User clicks on the logout button and is successfully logged out
-    Given the user is logged in with a valid session token "<token>"
-    When the user clicks on the logout button
-    Then the session token is cleared from the client storage
+  @ui @success
+  Scenario Outline: User successfully logs out and is redirected to login page
+    Given the user is logged in with email "<email>" and password "<password>"
+    When the user clicks the logout button
+    Then the user's session or token is cleared from the browser
     And the user is redirected to the login page at "<login_url>"
-    And the user sees the login page title "<login_title>"
+    And the login page displays "Please enter your credentials to login"
 
     Examples:
-      | token         | login_url        | login_title          |
-      | abcdef123456  | /login           | Login to your account|
+      | email              | password     | login_url           |
+      | admin@example.com  | password123  | /login              |
 
   @ui @api @negative
-  Scenario Outline: User tries to access the dashboard after logout and access is denied
-    Given the user has logged out and the session token is cleared
-    When the user navigates to the dashboard page at "<dashboard_url>"
+  Scenario Outline: Access to dashboard is denied after user has logged out
+    Given the user is logged in with email "<email>" and password "<password>"
+    And the user clicks the logout button
+    When the user tries to access the dashboard at "<dashboard_url>"
     Then the user is redirected to the login page at "<login_url>"
-    And the user sees an access denied message "<access_denied_message>"
+    And the login page displays "Please enter your credentials to login"
 
     Examples:
-      | dashboard_url | login_url | access_denied_message                   |
-      | /dashboard    | /login    | Please log in to access your dashboard |
+      | email              | password     | dashboard_url  | login_url |
+      | admin@example.com  | password123  | /dashboard    | /login    |
+
+  @ui @negative
+  Scenario Outline: User cannot see dashboard content after logout
+    Given the user is logged in with email "<email>" and password "<password>"
+    When the user clicks the logout button
+    And the user attempts to view dashboard content
+    Then the dashboard content is not visible
+    And the login page is displayed with message "Please enter your credentials to login"
+
+    Examples:
+      | email              | password     |
+      | admin@example.com  | password123  |

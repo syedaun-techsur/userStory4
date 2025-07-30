@@ -1,28 +1,41 @@
+@ui @api @success
 Feature: Display User Dashboard After Login
   As a logged-in user,
   I want to see a personalized dashboard,
-  So that I can view relevant information after login.
+  So that I can view relevant information immediately after login.
 
-  @ui @success @api
-  Scenario Outline: Authorized user accesses dashboard and views personalized content
-    Given the user has logged in with a valid token "<token>"
-    When the user navigates to the "/dashboard" route
-    Then the user should remain on the "/dashboard" page
-    And the dashboard should display the personalized content for user "<username>"
-
-    Examples:
-      | token          | username     |
-      | valid-token-123| alice        |
-      | valid-token-456| bob          |
-
-  @ui @negative
-  Scenario Outline: Unauthorized user is redirected to login when accessing dashboard
-    Given the user has not logged in or has an invalid token "<token>"
-    When the user attempts to navigate to the "/dashboard" route
-    Then the user should be redirected to the "/login" page
-    And an error message "You must be logged in to access the dashboard" should be displayed
+  @ui @api @success
+  Scenario Outline: Authorized user accesses dashboard and sees user-specific content
+    Given the user is logged in with email "<email>" and password "<password>"
+    When the user navigates to the /dashboard route
+    Then the dashboard page is displayed with personalized content for "<email>"
 
     Examples:
-      | token         |
-      | <empty>       |
-      | invalid-token |
+      | email              | password    |
+      | admin@example.com   | password123 |
+
+  @ui @api @negative
+  Scenario Outline: Unauthorized user attempts to access dashboard and is redirected to login
+    Given the user has a "<tokenStatus>" token/session
+    When the user requests the /dashboard route
+    Then the user is redirected to the login page with message "Please login to continue"
+
+    Examples:
+      | tokenStatus  |
+      | invalid      |
+      | expired      |
+      | <empty>     |
+
+  @ui @validation @negative
+  Scenario Outline: Login failure due to missing or invalid credentials
+    Given the login page is displayed
+    When the user enters email "<emailInput>" and password "<passwordInput>"
+    And submits the login form
+    Then the login fails with error message "<errorMessage>"
+
+    Examples:
+      | emailInput        | passwordInput | errorMessage                               |
+      | <empty>           | password123   | Email is required                          |
+      | invalid-email     | password123   | Please enter a valid email address         |
+      | admin@example.com | <empty>       | Password is required                        |
+      | admin@example.com | short         | Password must be at least 6 characters    |
